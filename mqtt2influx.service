@@ -1,0 +1,13 @@
+[Unit]
+Description=MQTT2InfluxDB
+After=multi-user.target
+
+[Service]
+User=pi
+Group=data
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python /home/pi/MQTT2influxDB.py
+
+[Install]
+WantedBy=multi-user.target
